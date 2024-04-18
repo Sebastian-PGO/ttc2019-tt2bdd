@@ -1,7 +1,0 @@
-/build/
-/bin/
-.gradle
-.project
-.classpath
-/.settings/
-output.xmi

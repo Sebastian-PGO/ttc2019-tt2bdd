@@ -1,20 +1,13 @@
 {
     "Tools": [
-        "EMFSolutionATL",
-        "EMFSolutionATLGraph",
-        "ATLEMFTVMImproved",
         "NMF",
-        "Fulib",
-        "RelationalRAGSolutionBDT",
-        "RelationalRAGSolutionOBDD",
-        "RelationalRAGSolutionOBDT",
-        "RelationalRAGSolutionROBDD",
-        "RelationalRAGSolutionROBDD-H",
-	"RSyncBDD",
-	"RSyncBDD-Unordered",
-	"RSyncBDT",
-	"RSyncBDT-Unordered",
-        "EMFSolutionYAMTL"
+    	"NMF_DisabledTieredPGO",
+    	"NMF_MaxTypeChecks0",
+    	"NMF_MaxTypeChecks1",
+    	"NMF_MaxTypeChecks2",
+    	"NMF_MaxTypeChecks3",
+    	"NMF_MaxTypeChecks4",
+    	"NMF_MaxTypeChecks5"
     ],
     "Models": [
         "GeneratedI4O2Seed42.ttmodel",
@@ -22,10 +15,9 @@
         "GeneratedI8O4Seed68.ttmodel",
         "GeneratedI10O2Seed68.ttmodel",
         "GeneratedI12O2Seed7634.ttmodel",
-        "GeneratedI14O4Seed7634.ttmodel",
-        "GeneratedI15O5Seed282316.ttmodel"
+        "GeneratedI14O4Seed7634.ttmodel"
     ],
-    "Runs": 10,
+    "Runs": 5,
     "Timeout": 10000
 }
 
