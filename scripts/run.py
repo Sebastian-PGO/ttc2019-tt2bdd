@@ -111,9 +111,37 @@ def visualize():
     Visualizes the benchmark results
     """
     clean_dir("diagrams")
-    set_working_directory("reporting")
-    subprocess.call(["Rscript", "visualize.R", os.path.join(BASE_DIRECTORY, "config", "reporting.json")])
-    subprocess.call(["Rscript", "memory.R"])
+    set_working_directory("diagrams")
+    
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+
+    data = pd.read_csv(os.path.join(BASE_DIRECTORY, 'output', 'output.csv'), sep=';')
+
+    time_data = data[data['MetricName'] == 'Time']
+    memory_data = data[data['MetricName'] == 'Memory']
+
+    palette = sns.color_palette('husl', len(data['Tool'].unique()))
+
+    plt.figure(figsize=(10,6))
+    sns.lineplot(data=time_data, x='Model', y='MetricValue', hue='Tool', palette=palette)
+    plt.title('Time Usage')
+    plt.ylabel('Time')
+    plt.ylim(0, time_data['MetricValue'].max())
+    plt.legend(bbox_to_anchor=(0.5, 0.5), loc='lower center')
+    plt.savefig('Time_Comparison.pdf')
+
+    plt.figure(figsize=(10,6))
+    sns.lineplot(data=memory_data, x='Model', y='MetricValue', hue='Tool', palette=palette)
+    plt.title('Memory Usage')
+    plt.ylabel('Memory')
+    plt.ylim(0, memory_data['MetricValue'].max())
+    plt.legend(bbox_to_anchor=(0.5, 0.5), loc='lower center')
+    plt.savefig('Memory_Comparison.pdf')
+
+
 
 
 if __name__ == "__main__":
