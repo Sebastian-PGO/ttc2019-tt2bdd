@@ -106,6 +106,16 @@ def set_working_directory(*path):
     os.chdir(dir)
 
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 def visualize():
     """
     Visualizes the benchmark results
@@ -120,29 +130,34 @@ def visualize():
 
     data = pd.read_csv(os.path.join(BASE_DIRECTORY, 'output', 'output.csv'), sep=';')
 
-    time_data = data[data['MetricName'] == 'Time']
-    memory_data = data[data['MetricName'] == 'Memory']
+    df_time = data[data['MetricName'] == 'Time']
+    df_memory = data[data['MetricName'] == 'Memory']
 
-    palette = sns.color_palette('husl', len(data['Tool'].unique()))
+    for phase_name in df_time['PhaseName'].unique():
+        df_time_phase = df_time[df_time['PhaseName'] == phase_name]
+        df_memory_phase = df_memory[df_memory['PhaseName'] == phase_name]
 
-    plt.figure(figsize=(10, 7))
-    sns.lineplot(data=time_data, x='Model', y='MetricValue', hue='Tool', palette=palette)
-    plt.yscale('log')
-    plt.xticks(fontsize=6)
-    plt.title('Time Comparison')
-    plt.legend(loc='lower right')
-    plt.savefig('Time_Comparison.pdf')
+        plt.figure(figsize=(10, 6))
+        sns.set_palette("husl", n_colors=len(df_time_phase['Tool'].unique()))
+        sns.lineplot(x='Model', y='MetricValue', hue='Tool', data=df_time_phase)
+        plt.xlabel('Model')
+        plt.ylabel('Time')
+        plt.title(f'Time ({phase_name})')
+        plt.xticks(rotation=10, fontsize=7)
+        plt.legend(loc='upper right')
+        plt.savefig(f'time_{phase_name}.pdf')
 
-    plt.figure(figsize=(10, 7))
-    sns.lineplot(data=memory_data, x='Model', y='MetricValue', hue='Tool', palette=palette)
-    plt.yscale('log')
-    plt.xticks(fontsize=6)
-    plt.title('Memory Comparison')
-    plt.legend(loc='lower right')
-    plt.savefig('Memory_Comparison.pdf')
+        plt.figure(figsize=(10, 6))
+        sns.set_palette("husl", n_colors=len(df_memory_phase['Tool'].unique()))
+        sns.lineplot(x='Model', y='MetricValue', hue='Tool', data=df_memory_phase)
+        plt.xlabel('Model')
+        plt.ylabel('Memory')
+        plt.title(f'Memory ({phase_name})')
+        plt.xticks(rotation=10, fontsize=7)
+        plt.legend(loc='upper right')
+        plt.savefig(f'memory_{phase_name}.pdf')
 
-
-
+    print("Diagramme wurden erfolgreich erstellt und als PDF-Dateien gespeichert.")
 
 
 if __name__ == "__main__":
