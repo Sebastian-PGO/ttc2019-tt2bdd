@@ -125,21 +125,22 @@ def visualize():
 
     palette = sns.color_palette('husl', len(data['Tool'].unique()))
 
-    plt.figure(figsize=(10,6))
+    plt.figure(figsize=(10, 7))
     sns.lineplot(data=time_data, x='Model', y='MetricValue', hue='Tool', palette=palette)
-    plt.title('Time Usage')
-    plt.ylabel('Time')
-    plt.ylim(0, time_data['MetricValue'].max())
-    plt.legend(bbox_to_anchor=(0.5, 0.5), loc='lower center')
+    plt.yscale('log')
+    plt.xticks(fontsize=6)
+    plt.title('Time Comparison')
+    plt.legend(loc='lower right')
     plt.savefig('Time_Comparison.pdf')
 
-    plt.figure(figsize=(10,6))
+    plt.figure(figsize=(10, 7))
     sns.lineplot(data=memory_data, x='Model', y='MetricValue', hue='Tool', palette=palette)
-    plt.title('Memory Usage')
-    plt.ylabel('Memory')
-    plt.ylim(0, memory_data['MetricValue'].max())
-    plt.legend(bbox_to_anchor=(0.5, 0.5), loc='lower center')
+    plt.yscale('log')
+    plt.xticks(fontsize=6)
+    plt.title('Memory Comparison')
+    plt.legend(loc='lower right')
     plt.savefig('Memory_Comparison.pdf')
+
 
 
 

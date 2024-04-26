@@ -1,0 +1,267 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "NMF-Basics/2.0.138": {
+        "type": "package",
+        "dependencies": {
+          "NMF-Expressions": "[2.0.138, 3.0.0)",
+          "NMF-Repository": "[2.0.138, 3.0.0)"
+        }
+      },
+      "NMF-Expressions/2.0.138": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NMF.Expressions.Linq.dll": {},
+          "lib/netstandard2.0/NMF.Expressions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NMF.Expressions.Linq.dll": {},
+          "lib/netstandard2.0/NMF.Expressions.dll": {}
+        }
+      },
+      "NMF-Repository/2.0.138": {
+        "type": "package",
+        "dependencies": {
+          "NMF-Expressions": "[2.0.138, 3.0.0)",
+          "NMF-Utilities": "[2.0.138, 3.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NMF.Collections.dll": {},
+          "lib/netstandard2.0/NMF.Models.dll": {},
+          "lib/netstandard2.0/NMF.Serialization.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NMF.Collections.dll": {},
+          "lib/netstandard2.0/NMF.Models.dll": {},
+          "lib/netstandard2.0/NMF.Serialization.dll": {}
+        }
+      },
+      "NMF-Synchronizations/2.0.138": {
+        "type": "package",
+        "dependencies": {
+          "NMF-Expressions": "[2.0.138, 3.0.0)",
+          "NMF-Transformations": "[2.0.138, 3.0.0)",
+          "NMF-Utilities": "[2.0.138, 3.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NMF.Synchronizations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NMF.Synchronizations.dll": {}
+        }
+      },
+      "NMF-Transformations/2.0.138": {
+        "type": "package",
+        "dependencies": {
+          "NMF-Expressions": "[2.0.138, 3.0.0)",
+          "NMF-Utilities": "[2.0.138, 3.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NMF.Transformations.Core.dll": {},
+          "lib/netstandard2.0/NMF.Transformations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NMF.Transformations.Core.dll": {},
+          "lib/netstandard2.0/NMF.Transformations.dll": {}
+        }
+      },
+      "NMF-Utilities/2.0.138": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NMF.Utilities.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NMF.Utilities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NMF-Basics/2.0.138": {
+      "sha512": "9+nN8dphHTmCbRHq5Fvyh54l1BSByPu+6TWC/hOfXa5F9aDEfSrFfZ+JgEmIBjBTLK3iHSN5shepKW2QFPfZYw==",
+      "type": "package",
+      "path": "nmf-basics/2.0.138",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "nmf-basics.2.0.138.nupkg.sha512",
+        "nmf-basics.nuspec",
+        "tools/CommandLine.dll",
+        "tools/CppCodeProvider.dll",
+        "tools/Ecore2Code.exe",
+        "tools/NMF.CodeGen.dll",
+        "tools/NMF.Collections.dll",
+        "tools/NMF.EcoreInterop.dll",
+        "tools/NMF.Expressions.Linq.dll",
+        "tools/NMF.Expressions.dll",
+        "tools/NMF.Layering.dll",
+        "tools/NMF.Models.MetaTransformation.dll",
+        "tools/NMF.Models.dll",
+        "tools/NMF.Serialization.dll",
+        "tools/NMF.Transformations.Core.dll",
+        "tools/NMF.Transformations.Parallel.dll",
+        "tools/NMF.Transformations.dll",
+        "tools/NMF.Utilities.dll",
+        "tools/System.CodeDom.dll",
+        "tools/System.Console.dll",
+        "tools/System.Reflection.TypeExtensions.dll"
+      ]
+    },
+    "NMF-Expressions/2.0.138": {
+      "sha512": "anA/0Ufcn6pDgaLskmXzoOi5750stkMqekeZekZM1ULt3/cZEo/06D9Z5LurAALfh3wPNa1Yu3qqSk73YANMrw==",
+      "type": "package",
+      "path": "nmf-expressions/2.0.138",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/NMF.Expressions.Linq.dll",
+        "lib/net45/NMF.Expressions.dll",
+        "lib/net461/NMF.Expressions.Linq.dll",
+        "lib/net461/NMF.Expressions.dll",
+        "lib/netstandard2.0/NMF.Expressions.Linq.dll",
+        "lib/netstandard2.0/NMF.Expressions.dll",
+        "nmf-expressions.2.0.138.nupkg.sha512",
+        "nmf-expressions.nuspec"
+      ]
+    },
+    "NMF-Repository/2.0.138": {
+      "sha512": "Tg+vxhQcSTL05qx48CgPZrtFYN+LDMFzLLydw+IKef31gX0tyqiY0BoGLkTbyoC/IiFJJYAEhvOTKbfZ2yj9QQ==",
+      "type": "package",
+      "path": "nmf-repository/2.0.138",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/NMF.Collections.dll",
+        "lib/net45/NMF.Models.dll",
+        "lib/net45/NMF.Serialization.dll",
+        "lib/net461/NMF.Collections.dll",
+        "lib/net461/NMF.Models.dll",
+        "lib/net461/NMF.Serialization.dll",
+        "lib/netstandard2.0/NMF.Collections.dll",
+        "lib/netstandard2.0/NMF.Models.dll",
+        "lib/netstandard2.0/NMF.Serialization.dll",
+        "nmf-repository.2.0.138.nupkg.sha512",
+        "nmf-repository.nuspec"
+      ]
+    },
+    "NMF-Synchronizations/2.0.138": {
+      "sha512": "oqWKKdaDV7QWplxq3pKrBVL20xFk4eXRu4epx4e8tD3tEz30+Ng1HrcEJft9/PwlCo2McitHrdmwCr6SvQdifg==",
+      "type": "package",
+      "path": "nmf-synchronizations/2.0.138",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/NMF.Synchronizations.dll",
+        "lib/net461/NMF.Synchronizations.dll",
+        "lib/netstandard2.0/NMF.Synchronizations.dll",
+        "nmf-synchronizations.2.0.138.nupkg.sha512",
+        "nmf-synchronizations.nuspec"
+      ]
+    },
+    "NMF-Transformations/2.0.138": {
+      "sha512": "C1UmlNrB0YSAJTA7jqcSlXpYWmuOV/6fxdCzj03OqcqazaIkRED8Cv8MZ2zCc+2U5PN86oAfpKg0jz2+aLuWjQ==",
+      "type": "package",
+      "path": "nmf-transformations/2.0.138",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/NMF.Transformations.Core.dll",
+        "lib/net45/NMF.Transformations.dll",
+        "lib/net461/NMF.Transformations.Core.dll",
+        "lib/net461/NMF.Transformations.dll",
+        "lib/netstandard2.0/NMF.Transformations.Core.dll",
+        "lib/netstandard2.0/NMF.Transformations.dll",
+        "nmf-transformations.2.0.138.nupkg.sha512",
+        "nmf-transformations.nuspec"
+      ]
+    },
+    "NMF-Utilities/2.0.138": {
+      "sha512": "CJDoBfxscPka/YB6BYQZW+ukn9e4bUiFBFFOYcJbyD0jN6+WFMnp0IbU9JZDfsprsNcbCHPoxFQ51EPl3Bhlrw==",
+      "type": "package",
+      "path": "nmf-utilities/2.0.138",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/NMF.Utilities.dll",
+        "lib/net461/NMF.Utilities.dll",
+        "lib/netstandard2.0/NMF.Utilities.dll",
+        "nmf-utilities.2.0.138.nupkg.sha512",
+        "nmf-utilities.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "NMF-Basics >= 2.0.138",
+      "NMF-Synchronizations >= 2.0.138"
+    ]
+  },
+  "packageFolders": {
+    "/home/sebasatian/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/sebasatian/Repos/ttc2019-tt2bdd/solutions/NMF/NMF.csproj",
+      "projectName": "TTC2019.BinaryDecision.NMF",
+      "projectPath": "/home/sebasatian/Repos/ttc2019-tt2bdd/solutions/NMF/NMF.csproj",
+      "packagesPath": "/home/sebasatian/.nuget/packages/",
+      "outputPath": "/home/sebasatian/Repos/ttc2019-tt2bdd/solutions/NMF/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/sebasatian/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "NMF-Basics": {
+            "target": "Package",
+            "version": "[2.0.138, )"
+          },
+          "NMF-Synchronizations": {
+            "target": "Package",
+            "version": "[2.0.138, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
